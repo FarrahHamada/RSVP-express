@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>R.S.V.P</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>R.S.V.P</h1>
+  <h2></h2>
+
+
+  <h3></h3>
+  <ul class="messages">
+  <% for(var i=0; i<tasks.length; i++) {%>
+    <li class="message">
+      <span><%= tasks[i].name %></span>
+        <span><%= tasks[i].detail %></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+
+  <form action="/tasks" method="POST">
+    <input class="input" type="text" placeholder="Name" name="detail">
+    <input class="input" type="text" placeholder="What are you bringing to the party?" name="detail">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
